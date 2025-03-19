@@ -1,0 +1,42 @@
+baseURL: https://zimacek.cz/
+theme: "PaperMod"
+defaultTheme: auto
+defaultContentLanguage: cs
+defaultContentLanguageInSubdir: false
+removePathAccents: true
+languages:
+    cs:
+        contentDir: content/cs
+        disabled: false
+        languageCode: cs-CZ
+        languageDirection: ltr
+        languageName: Czech
+        params:
+            dateFormat: "02. 01. 2006"
+        permalinks:
+            page:
+                blog: /blog/:year/:month/:slug/
+            section:
+                blog: /blog/
+        title: TZ
+        taxonomies:
+            kategorie: "kategorie"
+            technologie: "technologie"
+        weight: 1
+
+params:
+    ShowBreadCrumbs: true
+    ShowShareButtons: true
+    ShareButtons: ["linkedin"]
+    homeInfoParams:
+        title: "Ahoj, jsem Tomáš" # optional default will be site title
+        content: "a věnuji se 💻 IT, 🔄 digitálním inovacím a 🔒 kybernetické bezpečnosti."
+        #imageUrl: "<image link>" # optional
+        #imageTitle: "<title of image as alt>" # optional
+        #imageWidth: 120 # custom size
+        #imageHeight: 120 # custom size
+    socialIcons: # optional
+        - name: "linkedin"
+          url: "https://www.linkedin.com/in/zimacek"
+        - name: "GitHub"
+          url: "https://github.com/ZiMi-lab"

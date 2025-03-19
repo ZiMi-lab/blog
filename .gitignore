@@ -1,0 +1,43 @@
+# Hugo output directory (default)
+public/
+
+# Resources folder (Hugo pipes, SASS cache apod.)
+resources/
+
+# Hugo cache (např. při použití --cacheDir)
+hugo_stats.json
+.cache/
+.tmp/
+
+# Build output
+dist/
+build/
+
+# Node.js dependencies
+node_modules/
+
+# System/IDE files
+.DS_Store
+Thumbs.db
+*.log
+*.gz
+*.swp
+*.swo
+*.bak
+
+# VSCode & JetBrains IDEs
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Deployment-specific
+.netlify/
+.vercel/
+output/
+
+# Optional: content editor cache (pokud používáš např. Netlify CMS)
+admin/config.yml.lock
