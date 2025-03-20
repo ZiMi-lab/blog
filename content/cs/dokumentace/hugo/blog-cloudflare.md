@@ -13,7 +13,7 @@ Pokud chcete provozovat moderní a rychlý blog bez nutnosti správy serveru, ko
 
 ## ⚙️ 1. Instalace Hugo projektu
 
-Nainstalujte Hugo Extended verzi, např. [podle návodu](dokumentace/hugo/provoz-instalace).
+Nainstalujte Hugo Extended verzi, např. [podle návodu]({{< relref "dokumentace/hugo/provoz-instalace.md" >}}).
 
 Soubor `config.yaml` si můžete nastavit např. podle [mého vzorového, který je umístěn na GitHubu](https://github.com/ZiMi-lab/blog).
 
@@ -72,7 +72,7 @@ Cloudflare automaticky spustí build a nasadí blog. Po úspěšném buildu zís
 
 ## 🔗 Odkazy a zdroje
 
-- [Provoz a instalace Hugo v LXC kontejneru](dokumentace/hugo/provoz-instalace)
+- [Provoz a instalace Hugo v LXC kontejneru]({{< relref "dokumentace/hugo/provoz-instalace.md" >}})
 - [Hugo: Dokumentace](https://gohugo.io/documentation/)
 - [Příklad repozitáře](https://github.com/ZiMi-lab/blog)
 

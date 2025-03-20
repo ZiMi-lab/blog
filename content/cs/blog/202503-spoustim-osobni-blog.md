@@ -17,4 +17,4 @@ Chci se podělit o své vlastní **ověřené konfigurace, postupy a řešení**
 
 **První dva návody**
 
-Začínám rovnou návody na zprovoznění tohoto blogu – **jak spustit Hugo blog v LXC kontejneru na Proxmoxu** a jak ho následně **nasadit na GitHub a Cloudflare Pages**.
+Začínám rovnou návody na zprovoznění tohoto blogu – **[jak spustit Hugo blog v LXC kontejneru na Proxmoxu]({{< relref "dokumentace/hugo/provoz-instalace.md" >}})** a jak ho následně **[nasadit na GitHub a Cloudflare Pages]({{< relref "dokumentace/hugo/blog-cloudflare.md" >}})**.
