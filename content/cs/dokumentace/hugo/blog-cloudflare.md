@@ -79,5 +79,3 @@ Cloudflare automaticky spustí build a nasadí blog. Po úspěšném buildu zís
 ---
 
 Chcete si postavit vlastní blog bez serveru? S GitHubem, Hugem a Cloudflare Pages je to otázka pár minut. 📘
-
-#Hugo #CloudflarePages #StatickýWeb #GitHub #Deployment
