@@ -2,7 +2,7 @@
 date = '2025-02-27T12:23:15Z'
 title = 'Instalace a provoz Huga v LXC kontejneru na Proxmoxu'
 kategorie = ['Návod']
-technologie = ['Git', 'Go', 'Hugo']
+tags = ['Git', 'Go', 'Hugo']
 +++
 
 Tento návod popisuje instalaci **Huga** v **extended** edici v LXC kontejneru s Ubuntu na Proxmoxu. Instalace probíhá ze zdrojových kódů.

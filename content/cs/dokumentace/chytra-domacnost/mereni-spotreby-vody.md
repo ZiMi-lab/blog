@@ -2,7 +2,7 @@
 date = '2024-03-09T13:05:18Z'
 title = 'Měření spotřeby vody'
 kategorie = ['návod']
-technologie = ['ESP32', 'AI', 'Home Assistant']
+tags = ['ESP32', 'AI', 'Home Assistant']
 +++
 
 Odečet stavu vodoměru pomocí REST API. Návod pro ty, kteří nevyužívají MQTT.

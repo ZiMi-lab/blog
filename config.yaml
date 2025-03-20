@@ -21,7 +21,7 @@ languages:
         title: TZ
         taxonomies:
             kategorie: "kategorie"
-            technologie: "technologie"
+            tag: "tags"
         weight: 1
 
 params:

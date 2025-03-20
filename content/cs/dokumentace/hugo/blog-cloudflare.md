@@ -3,7 +3,7 @@ date = '2025-03-20T10:32:18Z'
 draft = false
 title = 'Jak nasadit Hugo blog na GitHub a Cloudflare Pages'
 kategorie = ['Návod']
-technologie = ['Cloudflare Pages', 'GitHub', 'Hugo']
+tags = ['Cloudflare Pages', 'Git', 'Hugo']
 +++
 Pokud chcete provozovat moderní a rychlý blog bez nutnosti správy serveru, kombinace **Hugo**, **GitHub** a **Cloudflare Pages** je skvělou volbou. V tomto článku projdeme krok za krokem:
 
