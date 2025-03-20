@@ -74,6 +74,44 @@ Tím zajistíš, že Cloudflare použije stejnou verzi Hugo jako máš při lok�
 
 ---
 
+## 🖼️ Práce s obrázky a automatická změna velikosti
+
+Pokud chceš v článcích používat obrázky s automatickou změnou velikosti pomocí shortcode `resized-img`, je potřeba dodržet určitou strukturu obsahu.
+
+---
+
+✅ **Řešení**
+
+### ✅ Převést článek na *Page Bundle*
+
+1. Vytvoř složku s názvem článku:
+
+```
+content/cs/dokumentace/chytra-domacnost/mereni-spotreby-vody/
+```
+
+2. Přesuň Markdown soubor do této složky a přejmenuj ho na `index.md`  
+3. Vlož obrázek `obrazek.png` do stejné složky  
+4. V Markdownu použij následující shortcode:
+
+```markdown
+{{< resized-img src="obrazek.png" size="600x jpg" alt="Obrázek" >}}
+```
+
+---
+
+### ✅ Vlastní shortcode
+
+Soubor je uložen v `layouts/shortcodes/resized-img.html`
+
+```go-html-template
+{{ $img := .Page.Resources.GetMatch (.Get "src") }}
+{{ if $img }}
+  {{ $resized := $img.Resize (.Get "size") }}
+  <img src="{{ $resized.RelPermalink }}" alt="{{ .Get "alt" }}">
+{{ end }}
+```
+
 ## 🔐 Bezpečnost a konfigurace
 
 - `.env` soubor je zahrnutý v `.gitignore`, aby se **nikdy nedostal do repozitáře**.
