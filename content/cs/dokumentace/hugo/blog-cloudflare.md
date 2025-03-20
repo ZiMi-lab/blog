@@ -4,12 +4,11 @@ draft = false
 title = 'Jak nasadit Hugo blog na GitHub a Cloudflare Pages'
 kategorie = ['Návod']
 tags = ['Cloudflare Pages', 'Git', 'Hugo']
+ShowToc = true
+TocOpen = true
 +++
-Pokud chcete provozovat moderní a rychlý blog bez nutnosti správy serveru, kombinace **Hugo**, **GitHub** a **Cloudflare Pages** je skvělou volbou. V tomto článku projdeme krok za krokem:
 
-- vytvoření repozitáře na GitHubu,
-- strukturu Hugo projektu,
-- propojení s Cloudflare Pages a první nasazení.
+Pokud chcete provozovat moderní a rychlý blog bez nutnosti správy serveru, kombinace **Hugo**, **GitHub** a **Cloudflare Pages** je skvělou volbou. V tomto článku projdeme krok za krokem:
 
 ## ⚙️ 1. Instalace Hugo projektu
 
@@ -43,7 +42,7 @@ Hugo používá tuto základní strukturu:
 /layouts/       → přizpůsobení šablony PaperMod
 /static/        → veřejné statické soubory
 /config.yaml    → hlavní konfigurační soubor Hugo
-/.env.example   → vzorový soubor s proměnnými prostředí
+/.env.example   → vzorový soubor s proměnnými prostředí (zatím není potřeba)
 ```
 
 Pro první článek (mrkněte do [oficiální dokumentace, jak tvořit obsah](https://gohugo.io/documentation/)):

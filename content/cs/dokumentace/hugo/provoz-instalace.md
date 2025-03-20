@@ -3,11 +3,13 @@ date = '2025-02-27T12:23:15Z'
 title = 'Instalace a provoz Huga v LXC kontejneru na Proxmoxu'
 kategorie = ['Návod']
 tags = ['Git', 'Go', 'Hugo']
+ShowToc = true
+TocOpen = true
 +++
 
 Tento návod popisuje instalaci **Huga** v **extended** edici v LXC kontejneru s Ubuntu na Proxmoxu. Instalace probíhá ze zdrojových kódů.
 
-## Požadavky
+## 🔧 Požadavky
 
 Než začneme, ujistěte se, že máte nainstalované následující komponenty:
 
@@ -15,7 +17,7 @@ Než začneme, ujistěte se, že máte nainstalované následující komponenty:
 - **Go (verze 1.24 nebo novější)** – nutné pro kompilaci
 - **GCC** – překladač potřebný pro kompilaci Go programů
 
-## Instalace
+## 📦 Instalace
 
 ### 1. Instalace Git a GCC
 
@@ -65,7 +67,7 @@ echo 'export PATH="$HOME/go/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-## Jak zjistit, který shell používám?
+## 🐚 Jak zjistit, který shell používám?
 
 V Linuxu i na macOS stačí zadat:
 

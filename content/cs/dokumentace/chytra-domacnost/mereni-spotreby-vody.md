@@ -3,21 +3,23 @@ date = '2024-03-09T13:05:18Z'
 title = 'Měření spotřeby vody'
 kategorie = ['návod']
 tags = ['ESP32', 'AI', 'Home Assistant']
+ShowToc = true
+TocOpen = true
 +++
 
 Odečet stavu vodoměru pomocí REST API. Návod pro ty, kteří nevyužívají MQTT.
-## Ai-on-the-edge-device
+## 🤖 Ai-on-the-edge-device
 Využití AI (Artificial intelligence / umělá inteligence) a zařízení s procesorem ESP32 ke vzdálenému odečtu energií.
 [Ai-on-the-edge-device](https://github.com/jomjol/AI-on-the-edge-device)
 
-### Přednosti řešení
-1. Malé a levné zařízení (cca 250 Kč);
+### ⭐ Přednosti řešení
+1. Malé a levné zařízení;
 2. Kamera včetně LED diody pro přísvit;
 3. Webová administrace pro nastavení odečtu;
 4. Podpora pro Home Assistant, InfluxDB, MQTT, REST API;
 5. Nízká spotřeba zařízení ESP32;
 
-### Dokončení nastavení zařízení ESP32-CAM
+### 📸 Dokončení nastavení zařízení ESP32-CAM
 Aby vše správně fungovalo a zobrazily se všechny údaje při volání REST API, nesmí být zařízení v chybovém stavu.
 
 Může se stát, že bude chybně zobrazena informace v části `Previous Value`. Je to dáno tím, že se nám odečetla chybně hodnota (nejspíše před dokončením úvodního nastavení). Zařízení hlásí chybu (Rate too high ...) a je nutné to opravit.
@@ -27,7 +29,7 @@ Settings -> Set "Previous Value" -> Enter new "previous value"
 ```
 Nastavte zde stejnou hodnotu, jako je v části `Current "previous value"`.
 
-## Integrace s HA pomocí REST API
+## 🔗 Integrace s HA pomocí REST API
 Nevyužívám pro připojení k ESP32-CAM MQTT, ale REST API. Home Assistant v pravidelných (5 minut) intervalech volá URL adresu a jsou mu vrácena data ve formátu JSON.
 
 ```

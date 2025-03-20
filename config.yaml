@@ -28,6 +28,8 @@ params:
     ShowBreadCrumbs: true
     ShowShareButtons: true
     ShareButtons: ["linkedin"]
+    ShowPostNavLinks: true
+    ShowCodeCopyButtons: true
     homeInfoParams:
         title: "Ahoj, jsem Tomáš" # optional default will be site title
         content: "a věnuji se 💻 IT, 🔄 digitálním inovacím a 🔒 kybernetické bezpečnosti."
