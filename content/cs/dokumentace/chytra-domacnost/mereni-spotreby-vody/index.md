@@ -82,5 +82,4 @@ Nyní stačí zkontrolovat, zda je vše správně zapsáno v konfiguračním sou
 
 Otevřeme si panel Energie a do části Spotřeba vody přidáme náš nový senzor. Následně uvidíme v dashboardu spotřebu vody.
 
-> [!info]
-> ![[2025_HA_energie.png]]
+{{< resized-img src="mereni-spotreby-vody.png" size="800x jpg" alt="Spotřeba vody" >}}
