@@ -1,6 +1,5 @@
 +++
 date = '2025-03-22T21:41:02Z'
-draft = true
 title = 'Můj chytrý domov: Když technologie spolupracují'
 tags = ['ABB free@home', 'HomeKit', 'Home Assistant', 'Matter']
 +++
