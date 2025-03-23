@@ -118,4 +118,6 @@ Soubor je uložen v `layouts/shortcodes/resized-img.html`
 - Nepřidávej do verzování žádné soukromé klíče, tokeny nebo interní URL.
 - Doporučuji oddělit drafty (koncepty článků) do samostatného privátního repozitáře nebo složky mimo `public`.
 
+📝 Obsah tohoto repozitáře je dostupný pod licencí [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
 #SmartHome #HomeLab #CyberSecurity #UměláInteligence #Blog #Hugo #CloudflarePages
