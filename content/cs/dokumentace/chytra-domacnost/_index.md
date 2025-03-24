@@ -7,4 +7,4 @@ title = 'Chytrá domácnost'
     identifier = 'chytra-domacnost'
 +++
 
-Přehled a návody k chytré domácnosti
+Chytrá domácnost může být pouze tehdy, když technologie spolupracují a tvoří jeden „inteligentní“ celek.
