@@ -26,8 +26,8 @@ languages:
 
 params:
     ShowBreadCrumbs: true
-    ShowShareButtons: true
-    ShareButtons: ["linkedin"]
+    ShowShareButtons: false
+    ShareButtons: ["linkedin", "x"]
     ShowPostNavLinks: true
     ShowCodeCopyButtons: true
     homeInfoParams:

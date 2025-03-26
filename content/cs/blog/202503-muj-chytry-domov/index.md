@@ -6,12 +6,15 @@ tags = ['ABB free@home', 'HomeKit', 'Home Assistant', 'Matter']
 
 Moje cesta k chytré domácnosti začala nenápadně – LED páskem za televizí. Dnes už propojuji světla, rekuperaci, multimédia i bezpečnostní systémy v jeden „_inteligentní_“ celek. Nabízím Vám pohled na to, jaké technologie u nás doma spolupracují.
 
+{{< resized-img src="chytry_domov.png" size="720x jpg" alt="Home Assistant, Apple Domácnost" >}}
+
 ## Home Assistant jako mozek celého systému
 
 Home Assistant běží lokálně a slouží jako **centrální integrační platforma**, která spojuje různorodé technologie:
 
 - **ABB free@home**: páteř elektroinstalace a ovládání světel, zásuvek i žaluzií
 - **Zigbee (ZHA)** a **Matter**: moderní protokoly pro přímé připojení zařízení
+- **HomeKit bridge**: napojení entit do Apple Domácnosti
 - **Node-RED**: vizuální nástroj pro automatizace
 - **Google Cast a Apple TV**: integrace multimédií do scén
 - **Modbus TCP**: průmyslový protokol pro řízení rekuperace
