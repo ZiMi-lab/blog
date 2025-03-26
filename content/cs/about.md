@@ -7,6 +7,9 @@ weight = 40
 
 Jmenuji se **Tomáš Zimáček** a již mnoho let se věnuji 💻 _informačním technologiím_, 🔄 _digitálním inovacím_ a 🔒 _kybernetické bezpečnosti_. Zaměřuji se na **správu IT systémů** a **vedení týmů**, které se starají o technologické zázemí úřadu.
 
+[Sledovat na LinkedIn](https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=zimacek)
+{.libutton}
+
 ## Profesní dráha
 
 V současnosti působím jako 📌 **vedoucí odboru ICT na Krajském úřadu Zlínského kraje**. Podílím se zde na 🚀 _rozvoji digitálních služeb_, 🔐 _ochraně dat_ a ⚙️ _správě informačních systémů_.

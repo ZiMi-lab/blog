@@ -45,3 +45,10 @@ params:
     mainSections:
         - dokumentace
         - blog
+
+markup:
+    goldmark:
+        parser:
+            attribute:
+                block: true
+                title: true
