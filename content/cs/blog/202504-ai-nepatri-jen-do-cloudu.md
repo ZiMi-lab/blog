@@ -1,6 +1,5 @@
 +++
 date = '2025-03-27T06:55:59Z'
-draft = true
 title = 'AI nepatří jen do cloudu: Jak rozjet vlastní jazykový model'
 tags = ['AI', 'OpenWebUI', 'lokální AI']
 +++
@@ -8,6 +7,7 @@ tags = ['AI', 'OpenWebUI', 'lokální AI']
 Umělá inteligence je součástí našich životů a jazykové modely, jako jsou ChatGPT, Grok nebo Gemini, se čím dál častěji uplatňují v nástrojích pro zpracování jazyka, automatizaci úkolů a komunikaci s uživateli. Globální trh s velkými jazykovými modely (LLM) v roce 2024 dosahoval hodnoty 5,6–6,5 miliardy USD a očekává se, že do roku 2030 naroste minimálně na 85 miliardy USD. Tento prudký růst je způsoben rostoucí poptávkou po nástrojích schopných analyzovat, generovat a překládat text s vysokou přesností.
 
 Provozování jazykového modelu nebo obecně umělé inteligence lokálně – tedy přímo na vašem počítači – už není jen výsadou technologických nadšenců. Díky pokroku v oblasti open-source modelů, efektivních nástrojů a optimalizačních technik je dnes možné spustit umělou inteligenci i na běžně dostupném hardwaru. Lokální AI řešení navíc poskytují uživateli plnou kontrolu nad tím, jak je model používán, na jakých datech běží a jak se chová. Nabízí reálné výhody, které stojí za zvážení jak pro jednotlivce, tak i pro firmy hledající bezpečnou a flexibilní alternativu ke cloudovým službám.
+
 ## **Proč spustit jazykový model lokálně?**
 
 ### **1. Soukromí a kontrola nad daty**
