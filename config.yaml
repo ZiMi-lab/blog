@@ -4,7 +4,6 @@ defaultTheme: auto
 defaultContentLanguage: cs
 defaultContentLanguageInSubdir: false
 removePathAccents: true
-author: "Tomáš Zimáček"
 languages:
     cs:
         contentDir: content/cs
@@ -26,6 +25,7 @@ languages:
         weight: 1
 
 params:
+    author: "Tomáš Zimáček"
     ShowBreadCrumbs: true
     ShowShareButtons: false
     ShareButtons: ["linkedin", "x"]
