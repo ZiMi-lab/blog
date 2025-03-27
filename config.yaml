@@ -4,6 +4,7 @@ defaultTheme: auto
 defaultContentLanguage: cs
 defaultContentLanguageInSubdir: false
 removePathAccents: true
+author: "Tomáš Zimáček"
 languages:
     cs:
         contentDir: content/cs
