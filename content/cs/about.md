@@ -1,6 +1,7 @@
 +++
 title = 'O mně'
 slug = 'about'
+keywords = ['správa IT','vedoucí odboru ICT','technologie','IT konzultant']
 menus = ['main', 'footer']
 weight = 40
 +++
