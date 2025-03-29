@@ -6,6 +6,7 @@ kategorie = ['Návod']
 tags = ['Cloudflare Pages', 'Git', 'Hugo']
 ShowToc = true
 TocOpen = true
+comments = true
 +++
 
 Pokud chcete provozovat moderní a rychlý blog bez nutnosti správy serveru, kombinace **Hugo**, **GitHub** a **Cloudflare Pages** je skvělou volbou. V tomto článku projdeme krok za krokem:

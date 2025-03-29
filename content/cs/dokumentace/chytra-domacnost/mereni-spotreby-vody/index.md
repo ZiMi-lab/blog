@@ -5,6 +5,7 @@ kategorie = ['návod']
 tags = ['ESP32', 'AI', 'Home Assistant']
 ShowToc = true
 TocOpen = true
+comments = true
 +++
 
 Odečet stavu vodoměru pomocí REST API. Návod pro ty, kteří nevyužívají MQTT.

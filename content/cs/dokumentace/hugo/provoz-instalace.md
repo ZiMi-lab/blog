@@ -5,6 +5,7 @@ kategorie = ['Návod']
 tags = ['Git', 'Go', 'Hugo']
 ShowToc = true
 TocOpen = true
+comments = true
 +++
 
 Tento návod popisuje instalaci **Huga** v **extended** edici v LXC kontejneru s Ubuntu na Proxmoxu. Instalace probíhá ze zdrojových kódů.

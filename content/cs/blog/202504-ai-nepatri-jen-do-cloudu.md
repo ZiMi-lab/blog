@@ -2,6 +2,7 @@
 date = '2025-03-27T06:55:59Z'
 title = 'AI nepatří jen do cloudu: Jak rozjet vlastní jazykový model'
 tags = ['AI', 'OpenWebUI', 'lokální AI']
+comments = true
 +++
 
 Umělá inteligence je součástí našich životů a jazykové modely, jako jsou ChatGPT, Grok nebo Gemini, se čím dál častěji uplatňují v nástrojích pro zpracování jazyka, automatizaci úkolů a komunikaci s uživateli. Globální trh s velkými jazykovými modely (LLM) v roce 2024 dosahoval hodnoty 5,6–6,5 miliardy USD a očekává se, že do roku 2030 naroste minimálně na 85 miliardy USD. Tento prudký růst je způsoben rostoucí poptávkou po nástrojích schopných analyzovat, generovat a překládat text s vysokou přesností.

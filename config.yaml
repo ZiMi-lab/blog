@@ -46,6 +46,19 @@ params:
     mainSections:
         - dokumentace
         - blog
+    giscus:
+        repo: "ZiMi-lab/blog"
+        repoID: "R_kgDOOLR8Mw"
+        category: "Articles"
+        categoryID: "DIC_kwDOOLR8M84Cok0w"
+        mapping: "title"
+        strict: "0"
+        reactionsEnabled: "1"
+        emitMetadata: "0"
+        inputPosition: "bottom"
+        theme: "preferred_color_scheme"
+        lang: "cs"
+        loading: "lazy"
 
 markup:
     goldmark:

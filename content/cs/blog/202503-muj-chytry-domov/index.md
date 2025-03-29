@@ -2,6 +2,7 @@
 date = '2025-03-22T21:41:02Z'
 title = 'Můj chytrý domov: Když technologie spolupracují'
 tags = ['ABB free@home', 'HomeKit', 'Home Assistant', 'Matter']
+comments = true
 +++
 
 Moje cesta k chytré domácnosti začala nenápadně – LED páskem za televizí. Dnes už propojuji světla, rekuperaci, multimédia i bezpečnostní systémy v jeden „_inteligentní_“ celek. Nabízím Vám pohled na to, jaké technologie u nás doma spolupracují.

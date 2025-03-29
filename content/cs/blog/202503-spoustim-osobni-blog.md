@@ -3,6 +3,7 @@ date = '2025-03-20T14:35:53Z'
 draft = false
 title = 'Spouštím svůj osobní blog!'
 keywords = ['blog','home lab','chytrá domácnost','AI']
+comments = true
 +++
 
 Dlouho jsem si hrál s myšlenkou začít důkladně dokumentovat vše, co dělám a zároveň sdílet tyto informace ve formě **praktických návodů, zkušeností a poznámek** ze světa **Home Labu, chytré domácnosti, sítí a umělé inteligence**.
