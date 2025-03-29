@@ -6,7 +6,7 @@ kategorie = ['Návod']
 tags = ['LLM', 'Ollama', 'Docker', 'OpenWebUI', 'AI']
 ShowToc = true
 TocOpen = true
-
+comments = true
 +++
 
 ## Proč provozovat jazykový model lokálně?

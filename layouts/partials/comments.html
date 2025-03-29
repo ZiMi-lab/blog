@@ -1,3 +1,4 @@
+{{ if .Site.Params.giscus }}
 <script src="https://giscus.app/client.js"
         data-repo="{{ .Site.Params.giscus.repo }}"
         data-repo-id="{{ .Site.Params.giscus.repoID }}"
@@ -14,3 +15,4 @@
         crossorigin="anonymous"
         async>
 </script>
+{{ end }}
