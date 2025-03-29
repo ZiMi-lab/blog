@@ -4,6 +4,7 @@ defaultTheme: auto
 defaultContentLanguage: cs
 defaultContentLanguageInSubdir: false
 removePathAccents: true
+enableRobotsTXT: true
 languages:
     cs:
         contentDir: content/cs
