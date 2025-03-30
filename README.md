@@ -74,6 +74,45 @@ Tím zajistíš, že Cloudflare použije stejnou verzi Hugo jako máš při lok�
 
 ---
 
+Tady je návrh doplnění části o Giscus komentářích do tvého `README.md`. Vložil bych ji jako novou sekci mezi „🛠️ Cloudflare Pages – Build nastavení“ a „🖼️ Práce s obrázky“:
+
+---
+
+## 💬 Komentáře přes Giscus
+
+Blog využívá systém komentářů [Giscus](https://giscus.app/cs), který je postavený na platformě [GitHub Discussions](https://docs.github.com/en/discussions).
+
+### Výhody Giscus:
+
+- Nevyžaduje vlastní backend – ideální pro statický web.
+- Komentáře jsou uchovávány v diskusích GitHub repozitáře.
+- Uživatelé se autentizují pomocí GitHub účtu (OAuth).
+- Žádný spam, minimální údržba.
+
+### Nastavení v projektu:
+
+Konfigurace Giscus se provádí v `config.yaml` v sekci `params.giscus`, např.:
+
+```yaml
+params:
+  giscus:
+    repo: "ZiMi-lab/blog"
+    repoID: "R_abcxyz123"
+    category: "Articles"
+    categoryID: "DIC_abcxyz123"
+    mapping: "title"
+    inputPosition: "bottom"
+    theme: "preferred_color_scheme"
+    lang: "cs"
+```
+
+Komentáře se vykreslují pomocí partial šablony `layouts/partials/comments.html`, která načítá JavaScript Giscus s parametry z konfigurace. Aktivují se přidáním `comments: true` do hlavičky (front matter) článku.
+
+Více informací najdeš i v článku na blogu:  
+🔗 [https://zimacek.cz/dokumentace/hugo/giscus-komentare-na-hugo-blogu/](https://zimacek.cz/dokumentace/hugo/giscus-komentare-na-hugo-blogu/)
+
+---
+
 ## 🖼️ Práce s obrázky a automatická změna velikosti
 
 Pokud chceš v článcích používat obrázky s automatickou změnou velikosti pomocí shortcode `resized-img`, je potřeba dodržet určitou strukturu obsahu.
