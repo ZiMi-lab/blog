@@ -1,27 +1,36 @@
 +++
 title = 'O mně'
+draft = false
 slug = 'about'
 menus = ['main', 'footer']
 weight = 40
 +++
 
-Jmenuji se **Tomáš Zimáček** a již mnoho let se věnuji 💻 _informačním technologiím_, 🔄 _digitálním inovacím_ a 🔒 _kybernetické bezpečnosti_. Zaměřuji se na **správu IT systémů** a **vedení týmů**, které se starají o technologické zázemí úřadu.
+Ahoj, jsem **Tomáš Zimáček**. Technologie jsou moje vášeň a tenhle blog je místem, kde ji sdílím.
 
-[Sledovat na LinkedIn](https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=zimacek)
-{.libutton}
+Jestli mě něco opravdu vystihuje, pak je to označení **"Blázen do technologií, inovací a bezpečnosti"**. 🚀 Technologie pro mě nejsou jen prací, ale především nekonečným zdrojem fascinace.
 
-## Profesní dráha
+Už přes 15 let se profesně pohybuji ve světě IT – od správy systémů, přes cloudové služby (třeba Google Cloud) a vývoj aplikací, až po současnou roli, kdy vedu odbor ICT na Krajském úřadě Zlínského kraje a snažím se posouvat digitální služby a kybernetickou bezpečnost ve veřejné správě.
 
-V současnosti působím jako 📌 **vedoucí odboru ICT na Krajském úřadu Zlínského kraje**. Podílím se zde na 🚀 _rozvoji digitálních služeb_, 🔐 _ochraně dat_ a ⚙️ _správě informačních systémů_.
+## Proč tento blog?
 
-Dříve jsem působil jako **vedoucí IT oddělení** a předtím jako **IT konzultant**.  
+Tenhle blog je mým digitálním hřištěm a zápisníkem. Vznikl z mé přirozené zvědavosti a potřeby neustále něco zkoumat, testovat, rozebírat a (občas i úspěšně) skládat dohromady. Najdete tu mé osobní postřehy, zkušenosti, návody a tipy z oblastí, které mě aktuálně nejvíce pohlcují:
 
-Mám také bohaté zkušenosti ze soukromého sektoru. Jako **IT konzultant na volné noze** jsem pomáhal firmám s ☁️ _cloudovými službami_, zejména v prostředí **Google Cloud**, a věnoval se vývoji 🌐 _webových aplikací_. Na začátku své kariéry jsem pracoval na obchodní pozici.
+* 🤖 **Umělá inteligence (AI):** Praktické využití, nástroje a experimenty.
+* 🏠 **Chytrá domácnost:** Automatizace, gadgety a jak si usnadnit (nebo zkomplikovat?) život.
+* 🖥️ **Home Lab:** Stavba a správa domácího serverového a síťového prostředí pro testování a učení.
+* 🔐 **Kybernetická bezpečnost:** Tipy a triky nejen pro profesionály.
+* 💻 **IT obecně:** Postřehy z praxe, zajímavé nástroje a všechno mezi tím.
 
-## 📖 Blog
+## Pro koho píšu?
 
-Tento blog se věnuje oblastem, které mě zaměstnávají nejen v práci, ale i ve volném čase:
+Píšu pro všechny, kdo sdílejí podobné nadšení – ať už jste ostřílený IT profesionál hledající nové nápady, technologický nadšenec, který si chce postavit první Home Lab, nebo prostě jen zvědavý člověk, kterého zajímá, jak technologie fungují a jak je bezpečně používat.
 
-🏠 _chytré domácnosti_, 🖥️ _Home Labu_, 🤖 _umělé inteligenci_ a 🔐 _kybernetické bezpečnosti_.
+Věřím v sílu sdílení znalostí a zkušeností. Doufám, že zde najdete inspiraci, užitečné informace nebo třeba řešení problému, se kterým si právě lámete hlavu.
 
-Najdete zde 📚 _návody, zkušenosti a tipy_, které mohou pomoci jak **IT profesionálům**, tak i **nadšencům**, kteří chtějí rozvíjet své technologické dovednosti.
+Budu rád za vaše komentáře, postřehy a diskuzi pod články. Technologie se neustále vyvíjí a já s nimi. Přidejte se ke mně na této cestě objevování!
+
+## Kde mě ještě najdete:
+
+* **LinkedIn:** [Tomáš Zimáček](https://www.linkedin.com/in/zimacek)
+* **GitHub:** [ZiMi-lab](https://github.com/ZiMi-lab)
