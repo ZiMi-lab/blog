@@ -8,6 +8,9 @@ weight = 40
 
 Ahoj, jsem **Tomáš Zimáček**. Technologie jsou moje vášeň a tenhle blog je místem, kde ji sdílím.
 
+[Sledovat na LinkedIn](https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=zimacek)
+ {.libutton}
+
 Jestli mě něco opravdu vystihuje, pak je to označení **"Blázen do technologií, inovací a bezpečnosti"**. 🚀 Technologie pro mě nejsou jen prací, ale především nekonečným zdrojem fascinace.
 
 Už přes 15 let se profesně pohybuji ve světě IT – od správy systémů, přes cloudové služby (třeba Google Cloud) a vývoj aplikací, až po současnou roli, kdy vedu odbor ICT na Krajském úřadě Zlínského kraje a snažím se posouvat digitální služby a kybernetickou bezpečnost ve veřejné správě.

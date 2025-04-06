@@ -34,7 +34,7 @@ params:
     ShowCodeCopyButtons: true
     homeInfoParams:
         title: "Ahoj, jsem Tomáš" # optional default will be site title
-        content: "a věnuji se 💻 IT, 🔄 digitálním inovacím a 🔒 kybernetické bezpečnosti."
+        content: "Technologický nadšenec, co rád posouvá hranice. 🚀 Píšu o IT, inovacích, bezpečnosti, AI a dalších tech vychytávkách."
         #imageUrl: "<image link>" # optional
         #imageTitle: "<title of image as alt>" # optional
         #imageWidth: 120 # custom size
