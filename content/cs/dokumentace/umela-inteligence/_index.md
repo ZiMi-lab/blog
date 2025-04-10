@@ -1,5 +1,4 @@
 +++
-date = '2025-03-25T09:55:40Z'
 draft = false
 title = 'Umělá inteligence'
 +++
