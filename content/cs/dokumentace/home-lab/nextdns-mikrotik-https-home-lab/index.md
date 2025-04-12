@@ -13,6 +13,7 @@ comments = true
 Provozujete domácí laboratoř (Home Lab) nebo jen chcete mít lepší kontrolu a bezpečí ve vaší síti? Pak jsou pro vás klíčové dva aspekty: bezpečné řešení DNS dotazů a šifrovaná komunikace i pro služby běžící uvnitř vaší sítě. V tomto článku si ukážeme, jak jsem si nastavil službu NextDNS na routeru Mikrotik pomocí šifrovaného protokolu DNS-over-HTTPS (DoH) a jak zajistil důvěryhodné HTTPS certifikáty pro interní aplikace pomocí Let's Encrypt a Nginx Proxy Manageru.
 
 Router nemusí být jen bránou do internetu. Může fungovat jako výkonný DNS resolver a cache pro všechna zařízení v lokální síti. Zařízení se pak neptají přímo externích serverů, ale vašeho routeru nebo DNS serveru, který dotazy buď zodpoví z vlastní rychlé paměti (cache), nebo je bezpečně přepošle dál.
+
 ### Proč řešit bezpečné DNS?
 
 Standardní DNS dotazy jsou v internety přenášeny nešifrovaně, což znamená, že váš poskytovatel internetu (a kdokoliv jiný "po cestě") může vidět, jaké weby navštěvujete. Filtrování a šifrování DNS je proto zásadní pro:
@@ -22,6 +23,8 @@ Standardní DNS dotazy jsou v internety přenášeny nešifrovaně, což znamen�
 3. **Rodičovskou kontrolu:** Filtrování nevhodného obsahu.
 
 Můžete využít různé služby. Cloudové jako **NextDNS** (moje volba), Cloudflare (1.1.1.1), Google (8.8.8.8) nebo Quad9 (9.9.9.9) nabízejí snadné nastavení a pokročilé funkce. Alternativou je lokální řešení jako Pi-hole, které si musíte spravovat sami.
+
+![Dashboard NextDNS](NextDNS.jpg)
 
 ### Nastavení NextDNS přes DNS-over-HTTPS (DoH) na Mikrotiku (RouterOS v7+)
 
@@ -128,6 +131,8 @@ Při této metodě nemusíte vystavovat vaši službu do internetu. Stačí, kdy
         - Automaticky získávat a obnovovat Let's Encrypt certifikáty (včetně metody DNS-01).
         - Centrálně spravovat HTTPS pro všechny vaše aplikace.
     - Alternativně DNS-01 challenge podporují i jiné nástroje jako **TrueNAS Scale**, **Proxmox VE** nebo nástroje jako `acme.sh`.
+
+![Nginx Proxy Manager](nginx.jpg)
 
 **Příklad konfigurace:**
 
