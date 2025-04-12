@@ -1,7 +1,7 @@
 +++
 date = '2025-04-11T19:20:41Z'
 draft = false
-title = 'Jak jsem nakonfiguroval Mikrotik RB3011 pro bezpečnou a přehlednou síť'
+title = 'Jak jsem nakonfiguroval Mikrotik pro bezpečnou a přehlednou síť'
 kategorie = ['návod']
 tags = ['Mikrotik', 'DNS', 'VLAN', 'firewall']
 ShowToc = true
