@@ -5,6 +5,8 @@ defaultContentLanguage: cs
 defaultContentLanguageInSubdir: false
 removePathAccents: true
 enableRobotsTXT: true
+pagination:
+    pagerSize: 6
 languages:
     cs:
         contentDir: content/cs
