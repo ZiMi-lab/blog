@@ -22,7 +22,7 @@ Standardní DNS dotazy jsou v internety přenášeny nešifrovaně, což znamen�
 2. **Bezpečnost:** Umožňuje blokovat škodlivé weby (malware, phishing), reklamy a sledovací nástroje.
 3. **Rodičovskou kontrolu:** Filtrování nevhodného obsahu.
 
-Můžete využít různé služby. Cloudové jako **NextDNS** (moje volba), Cloudflare (1.1.1.1), Google (8.8.8.8) nebo Quad9 (9.9.9.9) nabízejí snadné nastavení a pokročilé funkce. Alternativou je lokální řešení jako Pi-hole, které si musíte spravovat sami.
+Můžete využít různé služby. Cloudové jako **NextDNS** (moje volba), Cloudflare (1.1.1.1), Control D nebo Quad9 (9.9.9.9) nabízejí snadné nastavení a pokročilé funkce. Alternativou je lokální řešení jako Pi-hole, které si musíte spravovat sami.
 
 ![Dashboard NextDNS](NextDNS.jpg)
 
