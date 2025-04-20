@@ -2,4 +2,4 @@
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 {{- /* Head custom content area end */ -}}
-<script defer src="https://analytics.zimacek.cz/script.js" data-website-id="e84b80a8-ca76-4a19-9491-5b419840334b"></script>
+<script defer src="{{ .Site.Params.umami.script }}" data-website-id="{{ .Site.Params.umami.websiteID }}"></script>
