@@ -63,7 +63,7 @@ params:
         lang: "cs"
         loading: "lazy"
     umami:
-        script: "https://analytics.zimacek.cz/script.js"
+        script: "https://stats.zimacek.cz/script.js"
         websiteID: "e84b80a8-ca76-4a19-9491-5b419840334b"
 
 markup:
