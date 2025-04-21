@@ -2,4 +2,7 @@
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 {{- /* Head custom content area end */ -}}
+{{/* Umami Tracking Code - loaded if configured in params */}}
+{{ if and .Site.Params.umami.script .Site.Params.umami.websiteID }}
 <script defer src="{{ .Site.Params.umami.script }}" data-website-id="{{ .Site.Params.umami.websiteID }}"></script>
+{{ end }}
