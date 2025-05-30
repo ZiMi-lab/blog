@@ -53,16 +53,6 @@ Na obou Proxmox nodech (`proxmox1` i `proxmox2`):
     <IP_ADRESA_QDEVICE_VM> qdevice-vm.vasadomena.local qdevice-vm
     ```
 3. **Nastavte NTP klienta na Proxmoxu:** V novějších verzích Proxmox VE (konkrétně od verze 7) je jako výchozí NTP démon používán **`chrony`**. Přihlaste se do GUI, v levém navigačním panelu klikněte na **název vašeho nodu** (serveru Proxmox). Zvolte `System - Time`. Vše by mělo být předkonfigurováno.
-4. **Nastavte NTP na Debianu:** Já jsem musel doinstalovat:
-    ```
-    apt install systemd-timesyncd -y
-    ```
-5. **Konfigurace NTP serverů (Debian):** Upravte soubor `/etc/systemd/timesyncd.conf`. Odkomentujte nebo přidejte řádek `NTP`
-	```
-	[Time]
-	NTP=0.cz.pool.ntp.org 1.cz.pool.ntp.org
-	```
-    Restartujte službu: `systemctl restart systemd-timesyncd` a zkontrolujte stav: `timedatectl status`.
 
 ## Krok 2: Vytvoření clusteru (`proxmox1`)
 
@@ -123,6 +113,19 @@ Jak bylo zmíněno, QDevice poběží ve virtuálním stroji na TrueNAS.
 - Vytvořte si malý VM. Postačí 1 vCPU, 512MB-1GB RAM a malý disk (cca 8-10GB).
 - Nainstalujte oblíbenou distribuci (používám Debian).
 - Nastavte statickou IP adresu pro tento VM (např. `192.168.1.12`) a ujistěte se, že má funkční DNS a NTP.
+
+**Nastavte NTP:** Já jsem musel doinstalovat:
+```
+apt install systemd-timesyncd -y
+```
+
+**Konfigurace NTP serverů:** Upravte soubor `/etc/systemd/timesyncd.conf`. Odkomentujte nebo přidejte řádek `NTP`:
+```
+[Time]
+NTP=0.cz.pool.ntp.org 1.cz.pool.ntp.org
+```
+
+Restartujte službu: `systemctl restart systemd-timesyncd` a zkontrolujte stav: `timedatectl status`.
 
 **Instalace `corosync-qnetd` na `qdevice-vm`:** Přihlaste se na `qdevice-vm` přes SSH a nainstalujte balíček `corosync-qnetd`:
     ```
