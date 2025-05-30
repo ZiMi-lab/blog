@@ -128,16 +128,16 @@ NTP=0.cz.pool.ntp.org 1.cz.pool.ntp.org
 Restartujte službu: `systemctl restart systemd-timesyncd` a zkontrolujte stav: `timedatectl status`.
 
 **Instalace `corosync-qnetd` na `qdevice-vm`:** Přihlaste se na `qdevice-vm` přes SSH a nainstalujte balíček `corosync-qnetd`:
-    ```
-    sudo apt update
-    sudo apt install corosync-qnetd -y
-    ```
+```
+sudo apt update
+sudo apt install corosync-qnetd -y
+```
 
 **Konfigurace `corosync-qnetd`:** Výchozí konfigurace by měla být pro většinu případů dostatečná. Služba by se měla automaticky spustit a naslouchat na portu `5403/TCP`. Ověřte, že služba běží:
-    
-    ```
-    systemctl status corosync-qnetd
-    ```
+
+```
+systemctl status corosync-qnetd
+```
 
 Pokud máte na `qdevice-vm` aktivní firewall (např. `ufw`), ujistěte se, že povolujete příchozí spojení na TCP port 5403 z IP adres vašich Proxmox nodů.
 
@@ -147,7 +147,7 @@ Vraťte se na jeden z Proxmox nodů (např. `proxmox1`).
 
 Nejprve se ujistíme, že na svém Proxmox nodu (odkud se budeme připojovat na QDevice VM) máme vygenerovaný SSH klíč. Já jsem jej měl již vygenerovaný, má obvykle název `id_rsa.pub` a je uložen v adresáři `~/.ssh/`. Je možné jej vygenerovat např. `ssh-keygen -t rsa -b 4096`.
 
-Obsah souboru z `.ssh/id_rsa.pub` jsem zkopíroval do qdevice-vm na konec souboru `/root/.ssh/authorized_keys`. SSH server v Debian nemá povoleno přihlášení uživatele root pomocí hesla, proto nebude možné použít: `ssh-copy-id root@qdevice-vm_ip_adresa`
+Obsah souboru z `.ssh/id_rsa.pub` jsem zkopíroval do `qdevice-vm` na konec souboru `/root/.ssh/authorized_keys`. SSH server v Debian nemá povoleno přihlášení uživatele root pomocí hesla, proto nebude možné použít: `ssh-copy-id root@qdevice-vm_ip_adresa`
 
 Přidejte QDevice do clusteru:
 
