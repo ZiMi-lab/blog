@@ -29,7 +29,7 @@ Kvórum je mechanismus, který zajišťuje, že cluster může učinit rozhodnut
 
 Se dvěma nody nemůže cluster automaticky určit, která polovina je ta *správná* v případě ztráty komunikace mezi nimi. Zde přichází na řadu **QDevice (Quorum Device)**. Je to speciální proces (corosync-qnetd), který běží na třetím, nezávislém stroji a funguje jako další hlas při rozhodování. Pro cluster se dvěma nody a jedním QDevice je kvórum dosaženo, pokud jsou online alespoň dva ze tří *hlasujících* (tedy oba nody, nebo jeden node a QDevice).
 
-**Co potřebujeme:**
+### Co budeme potřebovat
 
 1. **Dva Proxmox VE servery:** Oba nody musí být aktuální (`proxmox1` a `proxmox2`).
 2. **RPi** nebo jiný **linuxový server (já mám TrueNAS):** Na tomto serveru vytvoříme malý virtuální stroj (používám Debianem), kde poběží `corosync-qnetd` (nazval jsem jej `qdevice-vm`).
