@@ -12,34 +12,32 @@ comments = true
 
 Provozování robustního a spolehlivého homelabu je cílem všech technologických nadšenců. Potřebuji virtualizaci a zajištění vysoké dostupnosti (HA) pro důležité služby, jako je například Home Assistant. Proxmox VE je skvělou platformou pro virtualizaci a navíc přímo umožňuje vytvořit cluster. To otevírá dveře k pokročilým možnostem, jako je migrace virtuálních strojů (VM) a kontejnerů (LXC) a právě vysoká dostupnost.
 
-Proxmox cluster vyžaduje pro správné fungování (quorum) minimálně tři nody. Co ale dělat, když máte k dispozici pouze dva fyzické servery? Řešením je tzv. QDevice, externí arbitr, který pomůže clusteru dosáhnout kvóra. V tomto článku si ukážeme, jak vytvořit cluster se dvěma nody a jako QDevice využít virtuální stroj běžící na TrueNAS (v mém případě na něm běží Corosync QNet daemon).
+Proxmox cluster vyžaduje pro správné fungování (quorum) minimálně tři nody. Co ale dělat, když máte k dispozici pouze dva fyzické servery? Řešením je tzv. QDevice, externí arbitr, který pomůže clusteru dosáhnout kvóra. V tomto článku si ukážeme, jak vytvořit cluster se dvěma nody a jako QDevice využít virtuální stroj běžící na TrueNAS.
 
 ## Proč cluster a proč QDevice?
 
 ### Výhody Proxmox clusteru
 
-- **Live migrace VM:** Možnost přesouvat běžící virtuální stroje mezi nody bez výpadku. To je skvělé i při údržbě hardwaru. Je však třeba počítat s tím, že se kopíruje obsah operační paměti (RAM) VM, což může u strojů s velkou RAM trvat déle. Pro některé scénáře a konfigurace může být rychlejší VM kontrolovaně vypnout a zapnout na cílovém nodu.
-- **Migrace LXC kontejnerů:** LXC kontejnery lze migrovat. Proxmox za určitých podmínek podporuje online migraci LXC (se sdíleným úložištěm), v praxi může být pro zajištění konzistence nutný krátký restart kontejneru na cílovém nodu, případně se pro jednodušší scénáře bez sdíleného úložiště využívá offline migrace (vypnutí, přesun, zapnutí).
+- **Live migrace VM:** Možnost přesouvat běžící virtuální stroje mezi nody bez výpadku. To je skvělé i při údržbě hardwaru. Je nutné počítat s tím, že se kopíruje obsah operační paměti (RAM) VM, což může u strojů s velkou RAM trvat déle. Pro některé scénáře a konfigurace může být rychlejší VM kontrolovaně vypnout a zapnout na cílovém nodu.
+- **Migrace LXC kontejnerů:** Proxmox za určitých podmínek podporuje online migraci LXC (se sdíleným úložištěm), v praxi může být pro zajištění konzistence nutný krátký restart kontejneru na cílovém nodu, případně se pro jednodušší scénáře bez sdíleného úložiště využívá offline migrace (vypnutí, přesun, zapnutí).
 - **Vysoká dostupnost (HA):** Pokud jeden z nodů selže, Proxmox HA automaticky restartuje definované VM/LXC na druhém, funkčním nodu. Ideální pro služby jako Home Assistant, které chci mít neustále online.
-- **Centralizovaná správa:** Spravujete všechny nody a jejich hosty z jednoho webového rozhraní.
+- **Centralizovaná správa:** Spravujete všechny nody z jednoho webového rozhraní.
 
 ### Problém se dvěma nody
 
-Kvórum je mechanismus, který zajišťuje, že cluster může učinit rozhodnutí (např. o tom, který nod je "master" nebo zda spustit HA procesy) pouze tehdy, když je online většina nodů. Tím se předchází situaci zvané *split-brain*, kdy by obě části rozděleného clusteru mohly fungovat nezávisle a způsobit nekonzistenci dat.
+Kvórum je mechanismus, který zajišťuje, že cluster může učinit rozhodnutí (např. o tom, který node je "master" nebo zda spustit HA procesy) pouze tehdy, když je online většina nodů. Tím se předchází situaci zvané *split-brain*, kdy by obě části rozděleného clusteru mohly fungovat nezávisle a způsobit nekonzistenci dat.
 
-Se dvěma nody nemůže cluster automaticky určit, která polovina je ta *správná* v případě ztráty komunikace mezi nimi. Zde přichází na řadu **QDevice (Quorum Device)**. Je to speciální proces (corosync-qnetd), který běží na třetím, nezávislém stroji a funguje jako další hlas při rozhodování. Pro cluster se dvěma nody a jedním QDevice je kvórum dosaženo, pokud jsou online alespoň dva ze tří *hlasujících* (tedy oba nody, nebo jeden nod a QDevice).
+Se dvěma nody nemůže cluster automaticky určit, která polovina je ta *správná* v případě ztráty komunikace mezi nimi. Zde přichází na řadu **QDevice (Quorum Device)**. Je to speciální proces (corosync-qnetd), který běží na třetím, nezávislém stroji a funguje jako další hlas při rozhodování. Pro cluster se dvěma nody a jedním QDevice je kvórum dosaženo, pokud jsou online alespoň dva ze tří *hlasujících* (tedy oba nody, nebo jeden node a QDevice).
 
-## Předpoklady
+**Co potřebujeme:**
 
-Než začneme, ujistěte se, že máte:
-
-1. **Dva Proxmox VE servery:** Oba nody by měly být aktuální (`proxmox1` a `proxmox2`).
+1. **Dva Proxmox VE servery:** Oba nody musí být aktuální (`proxmox1` a `proxmox2`).
 2. **RPi** nebo jiný **linuxový server (já mám TrueNAS):** Na tomto serveru vytvoříme malý virtuální stroj (používám Debianem), kde poběží `corosync-qnetd` (nazval jsem jej `qdevice-vm`).
 3. **Síťová konektivita:**
     - Všechny tři stroje (proxmox1, proxmox2, qdevice-vm) musí být ve stejné síti a musí na sebe vidět.
     - Doporučuje se mít pro clusterovou komunikaci dedikovanou síťovou kartu/VLAN, ale pro menší homelaby to není striktně nutné (může však ovlivnit výkon a stabilitu).
     - Jsou doporučeny statické IP adresy pro všechny stroje.
-4. **Synchronizovaný čas:** Všechny nody v clusteru (včetně QDevice) musí mít přesně synchronizovaný čas (NTP). Rozdíly v čase mohou způsobit vážné problémy s clusterem.
+4. **Synchronizovaný čas:** Všechny nody v clusteru (včetně QDevice) musí mít nastaveny NTP klienty. Rozdíly v čase mohou způsobit vážné problémy s clusterem.
 5. **Vždy zálohujte!**
 
 ## Krok 1: Příprava Proxmox nodů
@@ -47,23 +45,24 @@ Než začneme, ujistěte se, že máte:
 Na obou Proxmox nodech (`proxmox1` i `proxmox2`):
 
 1. **Aktualizujte systém:** např. přes GUI nebo CLI.
-2. **Zkontrolujte `/etc/hosts`:** Ujistěte se, že každý nod zná IP adresu a hostname ostatních nodů:   ```
+2. **Zkontrolujte `/etc/hosts`:** Ujistěte se, že každý nod zná IP adresu a hostname ostatních nodů:
+    ```
     127.0.0.1 localhost
     <IP_ADRESA_PROXMOX1> proxmox1.vasadomena.local proxmox1
     <IP_ADRESA_PROXMOX2> proxmox2.vasadomena.local proxmox2
-    <IP_ADRESA_QDEVICE_VM> qdevice-vm.vasadomena.local qdevice-vm```
-    
+    <IP_ADRESA_QDEVICE_VM> qdevice-vm.vasadomena.local qdevice-vm
+    ```
 3. **Nastavte NTP klienta na Proxmoxu:** V novějších verzích Proxmox VE (konkrétně od verze 7) je jako výchozí NTP démon používán **`chrony`**. Přihlaste se do GUI, v levém navigačním panelu klikněte na **název vašeho nodu** (serveru Proxmox). Zvolte `System - Time`. Vše by mělo být předkonfigurováno.
 4. **Nastavte NTP na Debianu:** Já jsem musel doinstalovat:
     ```
     apt install systemd-timesyncd -y
     ```
-5. **Konfigurace NTP serverů (Debian):** Odkomentujte nebo přidejte řádek `NTP`
+5. **Konfigurace NTP serverů (Debian):** Upravte soubor `/etc/systemd/timesyncd.conf`. Odkomentujte nebo přidejte řádek `NTP`
 	```
 	[Time]
 	NTP=0.cz.pool.ntp.org 1.cz.pool.ntp.org
 	```
-    Restartujte službu a zkontrolujte stav: `timedatectl status`.
+    Restartujte službu: `systemctl restart systemd-timesyncd` a zkontrolujte stav: `timedatectl status`.
 
 ## Krok 2: Vytvoření clusteru (`proxmox1`)
 
