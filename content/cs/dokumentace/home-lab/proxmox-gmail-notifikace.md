@@ -1,6 +1,6 @@
 +++
 date = '2025-06-06T07:30:00Z'
-draft = true
+draft = false
 title = 'Proxmox, Gmail a notifikace: Průvodce krok za krokem'
 description = 'Trápí vás notifikace z Proxmoxu? Ukážeme si, jak nakonfigurovat SMTP s Gmailem krok za krokem.'
 kategorie = ['návod']
