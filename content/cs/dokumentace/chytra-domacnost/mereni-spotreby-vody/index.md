@@ -61,7 +61,12 @@ sensor:
   resource: http://<IP.adresa.ESP32.cam>/json
   json_attributes:
     - main
-  value_template: '{{ value_json.value }}'
+  value_template: >
+    {% if value_json.value | length > 0 %}
+        {{ value_json.value }}
+    {% else %}
+        {{ value_json.pre }}
+    {% endif %}
   headers:
     Content-Type: application/json
   scan_interval: 300
