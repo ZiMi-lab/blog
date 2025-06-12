@@ -2,7 +2,7 @@
 date = '2025-03-20T14:35:53Z'
 draft = false
 title = 'Spouštím svůj osobní blog!'
-tags = ['blog','home lab','chytrá domácnost','AI']
+tags = ['home lab','chytra domácnost','AI']
 comments = true
 +++
 

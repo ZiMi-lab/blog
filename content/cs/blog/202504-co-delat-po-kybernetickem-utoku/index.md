@@ -1,7 +1,7 @@
 +++
 date = '2025-04-03T12:08:37Z'
 title = 'Co dělat bezprostředně po kybernetickém útoku'
-tags = ['kybernetický útok', 'zálohování']
+tags = ['kybernetická bezpečnost', 'zálohování', 'reakce na incident']
 comments = true
 +++
 

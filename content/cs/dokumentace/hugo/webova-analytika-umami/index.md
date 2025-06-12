@@ -2,7 +2,7 @@
 date = '2025-04-21T09:42:10Z'
 draft = false
 title = 'Vlastní webová analytika s Umami a Cloudflare Tunnel pro maximální soukromí'
-tags = ['Umami', 'Docker', 'Cloudflare Tunnel', 'Hugo', 'Home Lab']
+tags = ['Umami', 'Docker', 'Cloudflare', 'Hugo']
 kategorie = ['Návod']
 ShowToc = true
 TocOpen = true
