@@ -59,7 +59,7 @@ Teď už můžeme nainstalovat samotnou aplikaci.
 3. V konfiguračním průvodci vyplňte potřebné údaje. Nejdůležitější je správně namapovat úložiště, které jsme si připravili v předchozím kroku.
 4. Dokončete instalaci.
 
-![TrueNAS Apps Immich](immich.png)
+{{< resized-img src="immich.png" size="720x jpg" alt="TrueNAS Apps Immich" >}}
 
 **⭐ Tip z praxe:** Po prvním spuštění a otestování jsem aplikaci přidal více systémových prostředků. Zvláště při prvotním importu a analýze tisíců fotek (generování náhledů) se každý kousek výkonu navíc počítá. Nastavil jsem **4 vCPU a 6 GB RAM**, což výrazně zrychlilo zpracování fronty úloh.
 
